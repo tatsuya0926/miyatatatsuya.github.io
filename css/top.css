@@ -19,7 +19,8 @@
 .topProfileItem{
     margin-top: 1.5rem;
     margin-bottom: 2rem;
-    width: 70%;
+    /* 右の列との間隔 */
+    padding-right: 2rem;
 }
 
 .topInfoHeader{
@@ -39,4 +40,49 @@
 
 .topInfoItemBody{
     margin-left: 4rem;
+}
+
+/* ===== タブレット・狭いPC画面（1024px以下）: 左右2カラムを縦1列に ===== */
+@media (max-width: 1024px) {
+    .mainColumnTop{
+        padding: 0 6%;
+    }
+
+    .topBody{
+        flex-direction: column;
+    }
+
+    .topBodyLeft,
+    .topBodyRight{
+        width: 100%;
+    }
+
+    .topProfileItem{
+        padding-right: 0;
+    }
+}
+
+/* ===== スマートフォン・タブレット縦（768px以下） ===== */
+@media (max-width: 768px) {
+    .mainColumnTop{
+        padding: 0 16px;
+    }
+
+    .mainColumnTop h1{
+        font-size: 1.5rem;
+    }
+
+    .topProfileItem{
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .topInfoItemBody{
+        margin-left: 1.5rem;
+    }
+
+    /* 長いメールアドレスが画面幅をはみ出さないようにする */
+    .topProfileItem a{
+        overflow-wrap: anywhere;
+    }
 }

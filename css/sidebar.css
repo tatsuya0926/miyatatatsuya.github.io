@@ -45,3 +45,25 @@
 .sideLinkManager{
     color: #d420b3;
 }
+
+/* ===== スマートフォン・タブレット縦（768px以下） ===== */
+@media (max-width: 768px) {
+    .sidebar > ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+        margin: 0;
+        padding: 0.75rem 16px;
+        list-style: none;
+    }
+
+    .sideLink a{
+        position: static;
+    }
+
+    /* 大きな色付きマーカーの代わりに小さな色付きの点を表示 */
+    .sideLink::before{
+        content: "●";
+        margin-right: 0.3rem;
+    }
+}

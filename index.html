@@ -3,12 +3,21 @@
 
 <head>
     <meta charset="utf-8">
-    <title>宮田 竜弥のホームページ</title>
+    <title data-en="Tatsuya Miyata's Home Page">宮田 竜弥のホームページ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/top.css">
+    <script src="js/lang.js"></script>
 </head>
+
+<!--
+    日本語と英語を1つのファイルに併記しています。
+      data-lang="ja" … 日本語表示のときだけ見える
+      data-lang="en" … 英語表示のときだけ見える
+      data-lang なし … 両方で見える（メール・電話番号など共通のもの）
+    文章を直すときは、すぐ隣の英語(日本語)も一緒に直してください。
+-->
 
 <body>
     <div class="sidebar">
@@ -19,13 +28,13 @@
                 </a>
             </li>
             <li class="sideLink sideLinkTop">
-                <a href="./english.html">
-                    English
-                </a>
+                <a href="?lang=en" data-lang="ja">English</a>
+                <a href="?lang=ja" data-lang="en">日本語</a>
             </li>
             <li class="sideLink sideLinkManager">
                 <a href="./public.html">
-                    Publication
+                    <span data-lang="ja">業績</span>
+                    <span data-lang="en">Achievements</span>
                 </a>
             </li>
         </ul>
@@ -33,7 +42,8 @@
     <div class="mainColumn">
         <div class="mainColumnTop">
             <h1>
-                宮田 竜弥のホームページ
+                <span data-lang="ja">宮田 竜弥のホームページ</span>
+                <span data-lang="en">Tatsuya Miyata's Home Page</span>
             </h1>
             <div class="topBody">
                 <!-- 左エリア -->
@@ -41,30 +51,43 @@
                     <!-- <img class="topProfileImg" src="./src/image/top.jpg" /> -->
                     <div class="topProfileItem">
                         <div>
-                            宮田 竜弥（みやた たつや）
+                            <span data-lang="ja">宮田 竜弥（みやた たつや）</span>
+                            <span data-lang="en">Tatsuya Miyata</span>
+                        </div>
+                        <!-- 生年月日（非公開）
+                        <div>
+                            <span data-lang="ja">生年月日 2000年9月26日</span>
+                            <span data-lang="en">Birthday 26/9/2000</span>
+                        </div>
+                        -->
+                        <div>
+                            <span data-lang="ja">東京科学大学 博士1年</span>
+                            <span data-lang="en">Science Tokyo D1</span>
                         </div>
                         <div>
-                            生年月日 2000年9月26日
-                        </div>
-                        <div>
-                            東京科学大学 修士1年
+                            <span data-lang="ja">研究分野：情報統計力学, MCMC, 機械学習, 最適化</span>
+                            <span data-lang="en">Research interests: Statistical mechanical informatics, Markov-chain Monte-Carlo (MCMC), Machine learning, Optimization</span>
                         </div>
                     </div>
                     <div class="topProfileItem">
-                        mail:<a href="miyata.t.ag@m.titech.ac.jp">miyata.t.ag@m.titech.ac.jp</a>
+                        <div>mail:<a href="miyata.t.ag@m.titech.ac.jp">miyata.t.ag@m.titech.ac.jp</a></div>
+                        <div>mail:<a href="miyata.t.20b5@m.isct.ac.jp">miyata.t.20b5@m.isct.ac.jp</a></div>
                     </div>
                     <div class="topProfileItem">
                         <div>
-                            所属:
+                            <span data-lang="ja">所属:</span>
+                            <span data-lang="en">Affiliation:</span>
                         </div>
                         <div>
-                            東京科学大学 大岡山キャンパス
+                            <span data-lang="ja">東京科学大学 大岡山キャンパス</span>
+                            <span data-lang="en">Institute of Science Tokyo, Ookayama</span>
                         </div>
                         <div>
                             152-8550
                         </div>
                         <div>
-                            東京都目黒区大岡山2-12-1
+                            <span data-lang="ja">東京都目黒区大岡山2-12-1</span>
+                            <span data-lang="en">Tokyo</span>
                         </div>
                         <div>
                             TEL : +81-03-3726-1111
@@ -74,18 +97,12 @@
                 <div class="topBodyRight">
                     <div class="topInfoItem">
                         <div>
-                            ・活動
-                        </div>
-                        <div class="topInfoItemBody">
-                            日本物理学会2025 9月16日~19日 口頭発表
-                        </div>
-                    </div>
-                    <div class="topInfoItem">
-                        <div>
-                            当サイトの内容、テキスト、画像等の無断転載・無断使用を固く禁じます。
+                            <span data-lang="ja">当サイトの内容、テキスト、画像等の無断転載・無断使用を固く禁じます。</span>
+                            <span data-lang="en">Unauthorized reproduction or use of the content, text, images, etc. on this website is strictly prohibited.</span>
                         </div>
                         <div>
-                            お問い合わせはメールでご連絡をお願い致します。
+                            <span data-lang="ja">お問い合わせはメールでご連絡をお願い致します。</span>
+                            <span data-lang="en">Please contact me by email if you have any questions.</span>
                         </div>
                     </div>
 
@@ -93,7 +110,7 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 
 </html>

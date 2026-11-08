@@ -1,4 +1,42 @@
 .mainColumnManager{
     padding: 0 15%;
+    background-image: url(../src/image/bgtop.jpg);
     background-repeat: repeat;
+}
+
+/* ===== タブレット・狭いPC画面（1024px以下） ===== */
+@media (max-width: 1024px) {
+    .mainColumnManager{
+        padding: 0 6%;
+    }
+}
+
+/* ===== スマートフォン・タブレット縦（768px以下） ===== */
+@media (max-width: 768px) {
+    .mainColumnManager{
+        padding: 0 16px;
+    }
+}
+
+
+/* 業績リスト */
+.achievementList{
+    padding-left: 1.2rem;
+}
+
+.achievementList > li{
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* 種別ラベル（論文・口頭発表など） */
+.achievementType{
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0 0.5rem;
+    border: 1px solid #d420b3;
+    border-radius: 4px;
+    color: #d420b3;
+    font-size: 0.85rem;
 }

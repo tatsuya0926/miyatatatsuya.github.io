@@ -1,7 +1,21 @@
+/* 言語切替: <html lang> と違う言語の要素を隠す（js/lang.js が lang を設定） */
+html[lang="ja"] [data-lang="en"],
+html[lang="en"] [data-lang="ja"]{
+    display: none;
+}
+
+/* 横メニューの幅: 画面の20%。ただし狭い画面でも項目名が収まるよう最低180px */
+:root{
+    --sidebar-width: max(180px, 20vw);
+}
+
 body{
     display: flex;
     margin: 0;
     overflow-x: hidden;
+    /* 内容が少なくても画面の下まで背景を伸ばすため */
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .sidebar{
@@ -9,11 +23,45 @@ body{
     overflow-x: hidden;
     background-color: #ededf8;
     height: 100vh;
-    width: 20%;
+    width: var(--sidebar-width);
+    box-sizing: border-box;
     border-right: 0.5px solid #000000;
 }
 
 .mainColumn{
-    margin-left: 20%;
-    width: 80%;
+    margin-left: var(--sidebar-width);
+    flex-grow: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 背景を持つ中身（.mainColumnTop / .mainColumnManager）を下まで伸ばす */
+.mainColumn > *{
+    flex-grow: 1;
+}
+
+/* ===== スマートフォン・タブレット縦（768px以下） ===== */
+@media (max-width: 768px) {
+    body{
+        flex-direction: column;
+    }
+
+    /* サイドバーを画面上部の横並びメニューにする */
+    .sidebar{
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 0.5px solid #000000;
+    }
+
+    .mainColumn{
+        margin-left: 0;
+        width: 100%;
+        /* 上のメニューを除いた残りの高さいっぱいに広げる */
+        flex-grow: 1;
+    }
 }

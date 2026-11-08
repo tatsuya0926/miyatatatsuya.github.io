@@ -3,12 +3,18 @@
 
 <head>
     <meta charset="utf-8">
-    <title>宮田 竜弥のホームページ</title>
+    <title data-en="Achievements - Tatsuya Miyata">業績 - 宮田 竜弥のホームページ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/manager.css">
+    <script src="js/lang.js"></script>
 </head>
+
+<!--
+    業績ページ。年度ごとに新しい順に並べています。
+    項目を足すときは <li> を1つコピーして、日本語(data-lang="ja")と英語(data-lang="en")を書き換えてください。
+-->
 
 <body>
     <div class="sidebar">
@@ -19,28 +25,68 @@
                 </a>
             </li>
             <li class="sideLink sideLinkTop">
-                <a href="./english.html">
-                    English
-                </a>
+                <a href="?lang=en" data-lang="ja">English</a>
+                <a href="?lang=ja" data-lang="en">日本語</a>
             </li>
             <li class="sideLink sideLinkManager">
                 <a href="./public.html">
-                    Publication
+                    <span data-lang="ja">業績</span>
+                    <span data-lang="en">Achievements</span>
                 </a>
             </li>
         </ul>
     </div>
     <div class="mainColumn">
         <div class="mainColumnManager">
+            <h1>
+                <span data-lang="ja">業績</span>
+                <span data-lang="en">Achievements</span>
+            </h1>
+
             <h2>
-                2025年度
+                <span data-lang="ja">2026年度</span>
+                <span data-lang="en">FY2026</span>
             </h2>
-            <div>
-                TBD
-            </div>
+            <ul class="achievementList">
+                <li>
+                    <span class="achievementType">
+                        <span data-lang="ja">論文（採録決定）</span>
+                        <span data-lang="en">Paper (accepted)</span>
+                    </span>
+                    Tatsuya Miyata, Shunta Arai, and Satoshi Takabe,
+                    "Refined gradient-based temperature optimization for the replica-exchange Monte-Carlo method,"
+                    Physical Review E,
+                    <span data-lang="ja">掲載予定.</span>
+                    <span data-lang="en">to appear.</span>
+                    <a href="https://journals.aps.org/pre/accepted/10.1103/664f-wjpj">doi:10.1103/664f-wjpj</a>
+                </li>
+                <li>
+                    <span class="achievementType">
+                        <span data-lang="ja">ポスター発表</span>
+                        <span data-lang="en">Poster presentation</span>
+                    </span>
+                    <span data-lang="ja">宮田竜弥, 荒井俊太, 高邉賢史, 「レプリカ交換法における勾配ベース温度最適化手法の改良」, 第29回情報論的学習理論ワークショップ (IBIS2026), 1-199, 2026年10月26日~29日, ソニックシティ（埼玉県さいたま市）</span>
+                    <span data-lang="en">Tatsuya Miyata, Shunta Arai, and Satoshi Takabe, "Refined gradient-based temperature optimization for the replica-exchange Monte-Carlo method" (in Japanese), The 29th Information-Based Induction Sciences Workshop (IBIS2026), 1-199, October 26-29, 2026, Sonic City, Saitama</span>
+                </li>
+            </ul>
+
+            <h2>
+                <span data-lang="ja">2025年度</span>
+                <span data-lang="en">FY2025</span>
+            </h2>
+            <ul class="achievementList">
+                <li>
+                    <span class="achievementType">
+                        <span data-lang="ja">口頭発表</span>
+                        <span data-lang="en">Oral presentation</span>
+                    </span>
+                    <span data-lang="ja">宮田竜弥, 荒井俊太, 高邉賢史, 「サンプリング過程の微分情報に基づくレプリカ交換法の温度セット最適化」, 日本物理学会 第80回年次大会（2025年）, 2025年9月16日~19日, 広島大学 東広島キャンパス</span>
+                    <span data-lang="en">Tatsuya Miyata, Shunta Arai, and Satoshi Takabe, "Temperature-set optimization for the replica-exchange Monte-Carlo method based on derivative information of the sampling process" (in Japanese), The 80th Annual Meeting of the Physical Society of Japan (2025), September 16-19, 2025, Higashi-Hiroshima Campus, Hiroshima University</span>
+                </li>
+            </ul>
         </div>
-</div>
-    
+    </div>
+
 </body>
 
 </html>
